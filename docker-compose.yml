@@ -28,12 +28,12 @@ services:
      networks:
       - elastic
 
-  accountapidev:
+  elk:
      container_name: elk
      image: ${DOCKER_REGISTRY-}elk
      build:
        context: .
-       dockerfile: ELKDemo/Dockerfile
+       dockerfile: Dockerfile
      networks:
        - elastic
 
