@@ -11,8 +11,8 @@
     - xpack.watcher.enabled=false
     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     - discovery.type=single-node
-   networks:
-    - backend
+   #networks:
+   # - backend
 
   kibana:
    container_name: kibana
@@ -23,8 +23,8 @@
     - elasticsearch
    environment:
     - ELASTICSEARCH_URL=http://localhost:9200
-   networks:
-    - backend
+   #networks:
+   # - backend
 
 networks:
   backend:
